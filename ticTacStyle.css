@@ -1,0 +1,44 @@
+/* https://colorhunt.co/palette/133103 */
+
+body {
+  background: #2b2b28;
+  font-family: "Roboto", sans-serif;
+  color: #ebebe3;
+}
+
+h1,
+h2 {
+  margin: auto;
+  text-align: center;
+}
+
+table {
+  margin: 30px auto;
+}
+
+td {
+  height: 100px;
+  width: 100px;
+}
+
+.a {
+  border-top: 1px solid #ebebe3;
+  border-bottom: 1px solid #ebebe3;
+}
+
+.b {
+  border-left: 1px solid #ebebe3;
+  border-right: 1px solid #ebebe3;
+}
+
+.x {
+  margin-left: 20px;
+  text-align: center;
+  font-size: 5em;
+}
+
+.o {
+  margin-left: 20px;
+  text-align: center;
+  font-size: 5em;
+}
