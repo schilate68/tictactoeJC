@@ -12,6 +12,23 @@ h2 {
   text-align: center;
 }
 
+#audio {
+  margin: 70px auto;
+  text-align: center;
+}
+
+#restart {
+  margin: auto;
+  text-align: center;
+  padding-left: 0px;
+}
+
+button {
+  background: #2b2b28;
+  font-family: "Roboto", sans-serif;
+  color: #ebebe3;
+}
+
 table {
   margin: 30px auto;
 }
