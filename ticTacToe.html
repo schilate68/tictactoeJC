@@ -4,6 +4,7 @@
 <head>
 	<title>Tic Tac Toe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="icon" type="image/png" href="/faviconJC.png">
 	<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="ticTacStyle.css">
 	<script src="ticTac.js"></script>
@@ -12,33 +13,41 @@
 
 <body>
 	<h1>Tic Tac Toe</h1>
-	<table>
-		<tr>
-			<td id="1"></td>
-			<td id="2" class="b"></td>
-			<td id="3"></td>
-		</tr>
-		<tr>
-			<td id="4" class="a"></td>
-			<td id="5" class="b a"></td>
-			<td id="6" class="a"></td>
-		</tr>
-		<tr>
-			<td id="7"></td>
-			<td id="8" class="b"></td>
-			<td id="9"></td>
-		</tr>
+	<div id="container">
+		<table id="table">
+			<tr>
+				<td id="1"></td>
+				<td id="2" class="b"></td>
+				<td id="3"></td>
+			</tr>
+			<tr>
+				<td id="4" class="a"></td>
+				<td id="5" class="b a"></td>
+				<td id="6" class="a"></td>
+			</tr>
+			<tr>
+				<td id="7"></td>
+				<td id="8" class="b"></td>
+				<td id="9"></td>
+			</tr>
 
-	</table>
+		</table>
+	</div>
 
 	<h1>Results</h1>
-	<h2 id="result-message"></h2>
+	<div id="result-values">
+		<span>X = </span>
+		<span>O = </span>
+
+	</div>
+	<h1 id="result-message"></h1>
+
 	<br>
 
-	<dir id="restart">
+	<div id="restart">
 
 
-	</dir>
+	</div>
 
 	<br>
 
@@ -52,6 +61,10 @@
 		<button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/
 			Unmute</button>
 	</div>
+
+	<footer>
+		<p>Created my free logo at LogoMakr.com</p>
+	</footer>
 
 
 

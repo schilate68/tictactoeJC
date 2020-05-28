@@ -1,5 +1,5 @@
 /* https://colorhunt.co/palette/133103 */
-
+/* ff9a00  color of favicon*/
 body {
   background: #2b2b28;
   font-family: "Roboto", sans-serif;
@@ -12,6 +12,12 @@ h2 {
   text-align: center;
 }
 
+footer {
+  margin: auto;
+  text-align: center;
+  color: #4A4A48;
+}
+
 #audio {
   margin: 70px auto;
   text-align: center;
@@ -22,6 +28,9 @@ h2 {
   text-align: center;
   padding-left: 0px;
 }
+#result-values{
+  text-align: center;
+}
 
 button {
   background: #2b2b28;
@@ -29,13 +38,31 @@ button {
   color: #ebebe3;
 }
 
+
 table {
   margin: 30px auto;
+  z-index: 1;
+}
+
+.divClicks {
+  
+  position: absolute;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  margin: 75px auto;
+  background-color: #2b2b28;
+  opacity: 0;
+  z-index: 15;
+  width: 318px;
+  height: 313px;
+  
 }
 
 td {
-  height: 100px;
-  width: 100px;
+  height: 104px;
+  width: 102px;
 }
 
 .a {
@@ -52,10 +79,26 @@ td {
   margin-left: 20px;
   text-align: center;
   font-size: 5em;
+  animation: text 0.2s 1; duration timing-function delay iteration-count direction fill-mode;
 }
 
 .o {
   margin-left: 20px;
   text-align: center;
   font-size: 5em;
+  animation: text 0.2s 1;
+}
+
+
+
+
+@keyframes text {
+  0%{
+    justify-content: center;
+    text-align: center;
+    color : #2b2b28;
+    font-size: 0px;
+  }
+
+  
 }
