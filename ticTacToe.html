@@ -30,42 +30,37 @@
 				<td id="8" class="b"></td>
 				<td id="9"></td>
 			</tr>
-
 		</table>
 	</div>
 
-	<h1>Results</h1>
+	<h2>Score</h2>
 	<div id="result-values">
-		<span>X = </span>
-		<span>O = </span>
+		<span id='scoreX'>X = <span id="xScore"></span></span>
+		<span id='scoreO'>O = <span id="oScore"></span></span>
 
 	</div>
 	<h1 id="result-message"></h1>
-
 	<br>
 
-	<div id="restart">
-
-
-	</div>
-
+	<div id="restart"><button>Restart</button></div>
 	<br>
 
-	<div id="audio">
+	<div id='containAudioPlayer'>
+		<audio id="player" src="MusicTicTacToe.mp3"></audio>
+		<div id="audio">
+			<button onclick="document.getElementById('player').play()">Play</button>
+			<button onclick="document.getElementById('player').pause()">Pause</button>
+			<button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/
+				Unmute</button>
+		</div>
 
 	</div>
-	<audio id="player" src="MusicTicTacToe.mp3"></audio>
-	<div id="audio">
-		<button onclick="document.getElementById('player').play()">Play</button>
-		<button onclick="document.getElementById('player').pause()">Pause</button>
-		<button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/
-			Unmute</button>
-	</div>
+
+
 
 	<footer>
 		<p>Created my free logo at LogoMakr.com</p>
 	</footer>
-
 
 
 </body>

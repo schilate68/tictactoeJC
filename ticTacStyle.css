@@ -15,20 +15,33 @@ h2 {
 footer {
   margin: auto;
   text-align: center;
-  color: #4A4A48;
+  color: #4a4a48;
+}
+
+#scoreX {
+  padding-right: 20px;
 }
 
 #audio {
-  margin: 70px auto;
+  top: 10px;
+  margin: 20px auto;
   text-align: center;
+  position: relative;
+}
+
+#containAudioPlayer {
+  top: 10px;
+  margin: 20px auto;
+  text-align: center;
+  position: relative;
 }
 
 #restart {
-  margin: auto;
+  margin: 0px auto;
   text-align: center;
   padding-left: 0px;
 }
-#result-values{
+#result-values {
   text-align: center;
 }
 
@@ -38,14 +51,12 @@ button {
   color: #ebebe3;
 }
 
-
 table {
   margin: 30px auto;
   z-index: 1;
 }
 
 .divClicks {
-  
   position: absolute;
   top: 0;
   left: 0;
@@ -57,7 +68,6 @@ table {
   z-index: 15;
   width: 318px;
   height: 313px;
-  
 }
 
 td {
@@ -79,7 +89,7 @@ td {
   margin-left: 20px;
   text-align: center;
   font-size: 5em;
-  animation: text 0.2s 1; duration timing-function delay iteration-count direction fill-mode;
+  animation: text 0.2s 1;
 }
 
 .o {
@@ -89,16 +99,11 @@ td {
   animation: text 0.2s 1;
 }
 
-
-
-
 @keyframes text {
-  0%{
+  0% {
     justify-content: center;
     text-align: center;
-    color : #2b2b28;
+    color: #2b2b28;
     font-size: 0px;
   }
-
-  
 }
