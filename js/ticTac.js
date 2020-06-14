@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             if (winnerState) {
-                let audioWin = new Audio('SoundWinner.mp3');
+                let audioWin = new Audio('./sound/SoundWinner.mp3');
                 audioWin.play();
                 document.getElementById("table").insertAdjacentHTML("beforebegin", '<div id="divClicksId" class=divClicks></div>');
             } else if (!winnerState && checkFullBoard) {
@@ -172,7 +172,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 console.log("Hello CPU");
                 if (playerTurnState) {
                     if (!document.getElementById(i.toString()).innerHTML) {
-                        let audioX = new Audio('SoundPlay.mp3');
+                        let audioX = new Audio('./sound/SoundPlay.mp3');
                         audioX.play();
                         document.getElementById(i.toString()).insertAdjacentHTML("afterbegin", '<span class="x">X</span>');
                         playerTurnState = false;
@@ -184,7 +184,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
 
                 } else if ((!document.getElementById(i.toString()).innerHTML)) {
-                    let audioO = new Audio('SoundPlay.mp3');
+                    let audioO = new Audio('./sound/SoundPlay.mp3');
                     audioO.play();
                     document.getElementById(i.toString()).insertAdjacentHTML("afterbegin", '<span class="o">O</span>');
                     playerTurnState = true;
@@ -199,7 +199,7 @@ document.addEventListener('DOMContentLoaded', function () {
             } else {
                 if (playerTurnState) {
                     if (!document.getElementById(i.toString()).innerHTML) {
-                        let audioX = new Audio('SoundPlay.mp3');
+                        let audioX = new Audio('./sound/SoundPlay.mp3');
                         audioX.play();
                         document.getElementById(i.toString()).insertAdjacentHTML("afterbegin", '<span class="x">X</span>');
                         playerTurnState = false;
@@ -211,7 +211,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     }
 
                 } else if ((!document.getElementById(i.toString()).innerHTML)) {
-                    let audioO = new Audio('SoundPlay.mp3');
+                    let audioO = new Audio('./sound/SoundPlay.mp3');
                     audioO.play();
                     document.getElementById(i.toString()).insertAdjacentHTML("afterbegin", '<span class="o">O</span>');
                     playerTurnState = true;
