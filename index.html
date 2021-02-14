@@ -123,6 +123,24 @@
 			// See all available events and methods at https://wistia.com/doc/player-api.
 			onReady: function (video) {
 				video.bind("play", function () {
+					analytics.track('Video Playback Started', {
+						session_id: '12345',
+						content_asset_ids: ['0129370'],
+						content_pod_ids: ['segA', 'segB'],
+						ad_asset_ids: ['ad123', 'ad097'],
+						ad_pod_ids: ['adSegA', 'adSegB'],
+						ad_types: ['mid-roll', 'post-roll'],
+						position: 0,
+						total_length: 392,
+						bitrate: 100,
+						video_player: 'wistia',
+						sound: 88,
+						full_screen: false,
+						ad_enabled: false,
+						quality: 'hd1080',
+						category: 'Video',
+						label: `${video.name()}`
+					});
 					var playAlertElem = document.createElement("div");
 					playAlertElem.style.padding = "20px";
 					playAlertElem.innerHTML = `You played the video! Its name is ${video.name()}.`;
