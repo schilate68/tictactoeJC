@@ -75,13 +75,74 @@
 
 	</div>
 
+	<div class="example_video_wrapper">
+
+		<!-- A responsive Wistia embed code -->
+		<!-- 📣 Tip: Replace this with a video from your own Wistia account! Be sure to change the `id` in wistia-player-stuff.js to match your own video's id, too. -->
+		<script src="https://fast.wistia.com/embed/medias/df2872v5dr.jsonp" async></script>
+		<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
+		<div class="wistia_responsive_padding" style="padding:62.5% 0 0 0;position:relative;">
+			<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
+				<div class="wistia_embed wistia_async_df2872v5dr seo=false videoFoam=true"
+					style="height:100%;width:100%">&nbsp;</div>
+			</div>
+		</div>
+	</div>
+
 
 
 	<footer>
 		<p>Created my free logo at LogoMakr.com</p>
 	</footer>
 
+	<script>
+		window._wq = window._wq || [];
+		_wq.push({
+			// The id of the video embedded in `views/index.html`
+			id: "df2872v5dr",
 
+			// You can use Embed Options to customize the appearance and functionality of the video player.
+			// Try uncommenting a few options below.
+			// See the docs for more info: https://wistia.com/doc/embed-options 
+			options: {
+				// autoPlay: true,
+				// controlsVisibleOnLoad: false,
+				// email: "lennythedog@wistia.com",
+				// endVideoBehavior: "loop",
+				// fullscreenButton: false,
+				// googleAnalytics: true,
+				// playButton: false,
+				playerColor: "#54bbff",
+				// seo: true,
+				// stillUrl: "https://my-awesome-website.com/my-thumbnail-url.jpg",
+				// volume: 0.5,
+				wmode: "transparent"
+			},
+
+			// When the video becomes ready, we can run a function here, using `video` as a handle to the Player API.
+			// See all available events and methods at https://wistia.com/doc/player-api.
+			onReady: function (video) {
+				video.bind("play", function () {
+					var playAlertElem = document.createElement("div");
+					playAlertElem.style.padding = "20px";
+					playAlertElem.innerHTML = `You played the video! Its name is ${video.name()}.`;
+					document.body.appendChild(playAlertElem);
+					return video.unbind;
+				});
+
+				video.bind("secondchange", (s) => {
+					// maybe add some interactive goodness to the page?
+				});
+
+				video.bind("end", () => {
+					// cellll-e-brate good times COME ON! 🎉
+					console.log("The video ended");
+				});
+
+				// There are many other interesting events you can bind to: https://wistia.com/doc/player-api#events 
+			}
+		});
+	</script>
 </body>
 
 
