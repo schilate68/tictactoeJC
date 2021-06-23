@@ -149,7 +149,7 @@ document.addEventListener('DOMContentLoaded', function () {
             }
 
             if (winnerState) {
-                let audioWin = new Audio('./sound/SoundWinner.mp3');
+                let audioWin = new Audio('./sound/SoundWinnerShort.mp3');
                 audioWin.play();
                 document.getElementById("table").insertAdjacentHTML("beforebegin", '<div id="divClicksId" class=divClicks></div>');
             } else if (!winnerState && checkFullBoard) {
@@ -228,6 +228,8 @@ document.addEventListener('DOMContentLoaded', function () {
 
         }
     }
+
+    document.getElementById('player').volume = 0.2;
 });
 
 

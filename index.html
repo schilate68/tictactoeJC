@@ -2,25 +2,6 @@
 <html>
 
 <head>
-	<!--Segment script-->
-	<script>
-		!function () {
-			var analytics = window.analytics = window.analytics || []; if (!analytics.initialize) if (analytics.invoked) window.console && console.error && console.error("Segment snippet included twice."); else {
-				analytics.invoked = !0; analytics.methods = ["trackSubmit", "trackClick", "trackLink", "trackForm", "pageview", "identify", "reset", "group", "track", "ready", "alias", "debug", "page", "once", "off", "on", "addSourceMiddleware", "addIntegrationMiddleware", "setAnonymousId", "addDestinationMiddleware"]; analytics.factory = function (e) { return function () { var t = Array.prototype.slice.call(arguments); t.unshift(e); analytics.push(t); return analytics } }; for (var e = 0; e < analytics.methods.length; e++) { var key = analytics.methods[e]; analytics[key] = analytics.factory(key) } analytics.load = function (key, e) { var t = document.createElement("script"); t.type = "text/javascript"; t.async = !0; t.src = "https://cdn.segment.com/analytics.js/v1/" + key + "/analytics.min.js"; var n = document.getElementsByTagName("script")[0]; n.parentNode.insertBefore(t, n); analytics._loadOptions = e }; analytics.SNIPPET_VERSION = "4.13.1";
-				analytics.load("OJahxUBqOwJuubR7st3lrSIP7xs3LvCF");
-				analytics.page();
-			}
-		}();
-	</script>
-	<!-- Global site tag (gtag.js) - Google Analytics -->
-	<!-- <script async src="https://www.googletagmanager.com/gtag/js?id=G-LFBEG5BRP7"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-		function gtag() { dataLayer.push(arguments); }
-		gtag('js', new Date());
-
-		gtag('config', 'G-LFBEG5BRP7');
-	</script> -->
 	<title>Tic Tac Toe</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<link rel="icon" type="image/png" href="/faviconJC.png">
@@ -72,131 +53,10 @@
 			<button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/
 				Unmute</button>
 		</div>
-
 	</div>
-
-	<div class="example_video_wrapper">
-
-		<!-- A responsive Wistia embed code -->
-		<!-- 📣 Tip: Replace this with a video from your own Wistia account! Be sure to change the `id` in wistia-player-stuff.js to match your own video's id, too. -->
-		<script src="https://fast.wistia.com/embed/medias/df2872v5dr.jsonp" async></script>
-		<script src="https://fast.wistia.com/assets/external/E-v1.js" async></script>
-		<div class="wistia_responsive_padding" style="padding:62.5% 0 0 0;position:relative;">
-			<div class="wistia_responsive_wrapper" style="height:100%;left:0;position:absolute;top:0;width:100%;">
-				<div class="wistia_embed wistia_async_df2872v5dr seo=false videoFoam=true"
-					style="height:100%;width:100%">&nbsp;</div>
-			</div>
-		</div>
-	</div>
-
-
-
 	<footer>
 		<p>Created my free logo at LogoMakr.com</p>
 	</footer>
-
-	<script>
-		window._wq = window._wq || [];
-		_wq.push({
-			// The id of the video embedded in `views/index.html`
-			id: "df2872v5dr",
-
-			// You can use Embed Options to customize the appearance and functionality of the video player.
-			// Try uncommenting a few options below.
-			// See the docs for more info: https://wistia.com/doc/embed-options 
-			options: {
-				// autoPlay: true,
-				// controlsVisibleOnLoad: false,
-				// email: "lennythedog@wistia.com",
-				// endVideoBehavior: "loop",
-				// fullscreenButton: false,
-				// googleAnalytics: true,
-				// playButton: false,
-				playerColor: "#54bbff",
-				// seo: true,
-				// stillUrl: "https://my-awesome-website.com/my-thumbnail-url.jpg",
-				// volume: 0.5,
-				wmode: "transparent"
-			},
-
-			// When the video becomes ready, we can run a function here, using `video` as a handle to the Player API.
-			// See all available events and methods at https://wistia.com/doc/player-api.
-			onReady: function (video) {
-				video.bind("play", function () {
-					analytics.track('Video Playback Started', {
-						session_id: '12345',
-						content_asset_ids: ['0129370'],
-						content_pod_ids: ['segA', 'segB'],
-						ad_asset_ids: ['ad123', 'ad097'],
-						ad_pod_ids: ['adSegA', 'adSegB'],
-						ad_types: ['mid-roll', 'post-roll'],
-						position: 0,
-						total_length: 392,
-						bitrate: 100,
-						video_player: 'wistia',
-						sound: 88,
-						full_screen: false,
-						ad_enabled: false,
-						quality: 'hd1080',
-						category: 'Video',
-						label: `${video.name()}`
-					});
-					return video.unbind;
-				});
-
-				video.bind("pause", function () {
-					analytics.track('Video Playback Paused', {
-						session_id: '12345',
-						content_asset_id: '0129370',
-						content_pod_id: 'segA',
-						ad_asset_id: null,
-						ad_pod_id: null,
-						ad_type: null,
-						position: 21,
-						total_length: 392,
-						video_player: 'wistia',
-						sound: 88,
-						bitrate: 100,
-						full_screen: false,
-						ad_enabled: false,
-						quality: 'hd1080',
-						category: 'Video',
-						label: `${video.name()}`
-					});
-
-				});
-
-				video.bind("end", () => {
-					// cellll-e-brate good times COME ON! 🎉
-					analytics.track('Video Content Completed', {
-						session_id: '12345',
-						asset_id: '0129370',
-						pod_id: 'segB',
-						title: 'Interview with Tony Robbins',
-						description: 'short description',
-						keywords: ['entrepreneurship', 'motivation'],
-						season: '2',
-						episode: '177',
-						genre: 'entrepreneurship',
-						program: 'Tim Ferris Show',
-						publisher: 'Tim Ferris',
-						position: 360,
-						total_length: 360,
-						channel: 'espn',
-						full_episode: true,
-						livestream: false,
-						airdate: '1991-08-13',
-						category: 'Video',
-						label: `${video.name()}`
-					});
-
-				});
-
-				// There are many other interesting events you can bind to: https://wistia.com/doc/player-api#events 
-			}
-		});
-	</script>
 </body>
-
 
 </html>
