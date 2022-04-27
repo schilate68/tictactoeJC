@@ -69,9 +69,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 	<div id='containAudioPlayer'>
 		<audio id="player" src="sound/MusicTicTacToe.mp3"></audio>
 		<div id="audio">
-			<button onclick="document.getElementById('player').play()">Play</button>
-			<button onclick="document.getElementById('player').pause()">Pause</button>
-			<button onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/
+			<button id="play" onclick="document.getElementById('player').play()">Play</button>
+			<button id ="pause" onclick="document.getElementById('player').pause()">Pause</button>
+			<button id="mute" onclick="document.getElementById('player').muted=!document.getElementById('player').muted">Mute/
 				Unmute</button>
 		</div>
 	</div>
